@@ -32,7 +32,7 @@ int main()
 {
     std::cout << "Checking for rust...\r\n";
     
-    while(!get_pid("Rust.exe"))
+    while(get_pid("Rust.exe") == 0)
         std::cout << "[err] launch rust\r\n";
     
     uint32_t proc_id = get_pid("Rust.exe"); //get_pid(const char* proc_name);
